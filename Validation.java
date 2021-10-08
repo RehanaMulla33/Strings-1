@@ -12,14 +12,14 @@ public class Validation {
 	}
 
 	public String userCity(String city) {
-		if (city.length() > 4 || city.isEmpty() || city.isBlank()) {
+		if (city.length() < 4 || city.isEmpty() || city.isBlank()) {
 			return " City should not be empty or blank! Please eter valid city name";
 		}
 		return "Registration successful";
 	}
 
 	public String userPincode(String pincode) {
-		if (pincode.length() > 6 || pincode.isEmpty()) {
+		if (pincode.length()==6 && pincode.isEmpty()) {
 			return "Enter valid pincode";
 		}
 		return "Registration success";
@@ -35,7 +35,7 @@ public class Validation {
 	}
 
 	public String userEmail(String email) {
-		if (email.length() > 15 && email.endsWith(".com") && email.isEmpty()) {
+		if (email.length() <=15 && email.endsWith(".com") && email.isEmpty()) {
 			return "Registration success";
 		}
 		return "Email should not be empty! plz enter valid email id ";
